@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2020-04-19T16:02:41.021138354Z",
+  "genesis_time": "2020-04-20T03:45:36.945066755Z",
   "chain_id": "tn-testnet-1",
   "consensus_params": {
     "block": {
@@ -18,18 +18,6 @@
   },
   "app_hash": "",
   "app_state": {
-    "slashing": {
-      "params": {
-        "max_evidence_age": "120000000000",
-        "signed_blocks_window": "100",
-        "min_signed_per_window": "0.500000000000000000",
-        "downtime_jail_duration": "600000000000",
-        "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.010000000000000000"
-      },
-      "signing_infos": {},
-      "missed_blocks": {}
-    },
     "track": {
       "starting_track_id": "1",
       "tracks": null,
@@ -44,63 +32,88 @@
         "max_deposit_period": "240000000000"
       }
     },
+    "accounts": [
+      {
+        "address": "trentino1kvf6x3t5p7gqe3qtx7cqx0sdd42mn062g0ycl6",
+        "coins": [
+          {
+            "denom": "utnc",
+            "amount": "150000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0",
+        "module_name": "",
+        "module_permissions": [
+          ""
+        ]
+      },
+      {
+        "address": "trentino1np2sw5nda8qg67ljhgm29xvymqdezg4wa7x7a9",
+        "coins": [
+          {
+            "denom": "utnc",
+            "amount": "116000000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0",
+        "module_name": "",
+        "module_permissions": [
+          ""
+        ]
+      }
+    ],
     "crisis": {
       "constant_fee": {
         "denom": "utnc",
         "amount": "1000"
       }
     },
-    "supply": {
-      "supply": []
+    "params": null,
+    "mint": {
+      "minter": {
+        "inflation": "0.130000000000000000",
+        "annual_provisions": "0.000000000000000000"
+      },
+      "params": {
+        "mint_denom": "utnc",
+        "inflation_rate_change": "0.130000000000000000",
+        "inflation_max": "0.200000000000000000",
+        "inflation_min": "0.070000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "6311520"
+      }
     },
-    "genutil": {
-      "gentxs": [
-        {
-          "type": "cosmos-sdk/StdTx",
-          "value": {
-            "msg": [
-              {
-                "type": "cosmos-sdk/MsgCreateValidator",
-                "value": {
-                  "description": {
-                    "moniker": "MyValidator2",
-                    "identity": "",
-                    "website": "",
-                    "details": ""
-                  },
-                  "commission": {
-                    "rate": "0.100000000000000000",
-                    "max_rate": "0.200000000000000000",
-                    "max_change_rate": "0.010000000000000000"
-                  },
-                  "min_self_delegation": "1",
-                  "delegator_address": "trentino1zflearlh7jfzjlungfv4t7mddna2np6gt8q4s0",
-                  "validator_address": "trentinovaloper1zflearlh7jfzjlungfv4t7mddna2np6gqf0kgk",
-                  "pubkey": "trentinovalconspub1zcjduepqwkk0pdev6rgh8q77qgfmqwqddd2gtg29v036cvj4caxwx5a0aadqgc08wc",
-                  "value": {
-                    "denom": "utnc",
-                    "amount": "100000000000"
-                  }
-                }
-              }
-            ],
-            "fee": {
-              "amount": [],
-              "gas": "200000"
-            },
-            "signatures": [
-              {
-                "pub_key": {
-                  "type": "tendermint/PubKeySecp256k1",
-                  "value": "AvMmOgHK15GGWpS8xBvOmIbzp0tQIcgTCQNPvSPYLlXg"
-                },
-                "signature": "1n97ksMjkc9nCegHGzrm+QTaDLaXvCmAQQlSCH1ubxQ4O7bKja244h9cv0mc4VAbimvltKDFPgaNZSczrU0bJw=="
-              }
-            ],
-            "memo": "0df6561ccfaf008685462b7b2ffa6ae5f8119cd8@78.47.88.5:26656"
-          }
-        }
-      ]
+    "bank": {
+      "send_enabled": true
+    },
+    "distribution": {
+      "fee_pool": {
+        "community_pool": []
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true,
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
     },
     "staking": {
       "params": {
@@ -123,65 +136,6 @@
       },
       "reward_tax": "0.030000000000000000",
       "rewards": null
-    },
-    "mint": {
-      "minter": {
-        "inflation": "0.130000000000000000",
-        "annual_provisions": "0.000000000000000000"
-      },
-      "params": {
-        "mint_denom": "utnc",
-        "inflation_rate_change": "0.130000000000000000",
-        "inflation_max": "0.200000000000000000",
-        "inflation_min": "0.070000000000000000",
-        "goal_bonded": "0.670000000000000000",
-        "blocks_per_year": "6311520"
-      }
-    },
-    "accounts": [
-      {
-        "address": "trentino1zflearlh7jfzjlungfv4t7mddna2np6gt8q4s0",
-        "coins": [
-          {
-            "denom": "utnc",
-            "amount": "150000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0",
-        "module_name": "",
-        "module_permissions": [
-          ""
-        ]
-      },
-      {
-        "address": "trentino1u9xdsn38prg5ne9w4uurefvrd4v2h55a0grmyd",
-        "coins": [
-          {
-            "denom": "utnc",
-            "amount": "116000000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0",
-        "module_name": "",
-        "module_permissions": [
-          ""
-        ]
-      }
-    ],
-    "bank": {
-      "send_enabled": true
     },
     "gov": {
       "starting_proposal_id": "1",
@@ -206,7 +160,55 @@
         "veto": "0.334000000000000000"
       }
     },
-    "params": null,
+    "genutil": {
+      "gentxs": [
+        {
+          "type": "cosmos-sdk/StdTx",
+          "value": {
+            "msg": [
+              {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                  "description": {
+                    "moniker": "MyValidator3",
+                    "identity": "",
+                    "website": "",
+                    "details": ""
+                  },
+                  "commission": {
+                    "rate": "0.100000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                  },
+                  "min_self_delegation": "1",
+                  "delegator_address": "trentino1kvf6x3t5p7gqe3qtx7cqx0sdd42mn062g0ycl6",
+                  "validator_address": "trentinovaloper1kvf6x3t5p7gqe3qtx7cqx0sdd42mn062rptm8r",
+                  "pubkey": "trentinovalconspub1zcjduepqm9arc5mc08268x00ns2ljn0k0srs4pwdpy955xu452s7ypag8zyq6ty4ae",
+                  "value": {
+                    "denom": "utnc",
+                    "amount": "100000000000"
+                  }
+                }
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas": "200000"
+            },
+            "signatures": [
+              {
+                "pub_key": {
+                  "type": "tendermint/PubKeySecp256k1",
+                  "value": "AvORgDvFR3kM9nO1/6lDoIyJcA6Buq6kVmVSPgPRKPBR"
+                },
+                "signature": "51ezTEAQD9imTz89ohZHKJNtoiXDOyVkjfPXGN9ejko05GfOQgRB4znL6ai0Hw1CvKfOM/IaeU+GtRj0euGH8w=="
+              }
+            ],
+            "memo": "4eade241153cc84d64108fe45bbf051a942b65bb@78.47.88.5:26656"
+          }
+        }
+      ]
+    },
     "auth": {
       "params": {
         "max_memo_characters": "256",
@@ -216,22 +218,20 @@
         "sig_verify_cost_secp256k1": "1000"
       }
     },
-    "distribution": {
-      "fee_pool": {
-        "community_pool": []
+    "supply": {
+      "supply": []
+    },
+    "slashing": {
+      "params": {
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
       },
-      "community_tax": "0.020000000000000000",
-      "base_proposer_reward": "0.010000000000000000",
-      "bonus_proposer_reward": "0.040000000000000000",
-      "withdraw_addr_enabled": true,
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "outstanding_rewards": [],
-      "validator_accumulated_commissions": [],
-      "validator_historical_rewards": [],
-      "validator_current_rewards": [],
-      "delegator_starting_infos": [],
-      "validator_slash_events": []
+      "signing_infos": {},
+      "missed_blocks": {}
     }
   }
 }
