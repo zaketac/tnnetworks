@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2020-04-21T03:45:36.945066755Z",
+  "genesis_time": "2019-04-21T03:45:36.945066755Z",
   "chain_id": "tn-testnet-1",
   "consensus_params": {
     "block": {
