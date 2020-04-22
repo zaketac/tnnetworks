@@ -18,124 +18,17 @@
   },
   "app_hash": "",
   "app_state": {
-    "track": {
-      "starting_track_id": "1",
-      "tracks": null,
-      "deposits": null,
-      "deposit_params": {
-        "min_deposit": [
-          {
-            "denom": "utnc",
-            "amount": "10000000"
-          }
-        ],
-        "max_deposit_period": "240000000000"
-      }
-    },
-    "accounts": [
-      {
-        "address": "trentino1kvf6x3t5p7gqe3qtx7cqx0sdd42mn062g0ycl6",
-        "coins": [
-          {
-            "denom": "utnc",
-            "amount": "150000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0",
-        "module_name": "",
-        "module_permissions": [
-          ""
-        ]
-      },
-      {
-        "address": "trentino1np2sw5nda8qg67ljhgm29xvymqdezg4wa7x7a9",
-        "coins": [
-          {
-            "denom": "utnc",
-            "amount": "116000000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0",
-        "module_name": "",
-        "module_permissions": [
-          ""
-        ]
-      }
-    ],
-    "crisis": {
-      "constant_fee": {
-        "denom": "utnc",
-        "amount": "1000"
-      }
-    },
-    "params": null,
-    "mint": {
-      "minter": {
-        "inflation": "0.130000000000000000",
-        "annual_provisions": "0.000000000000000000"
-      },
+    "slashing": {
       "params": {
-        "mint_denom": "utnc",
-        "inflation_rate_change": "0.130000000000000000",
-        "inflation_max": "0.200000000000000000",
-        "inflation_min": "0.070000000000000000",
-        "goal_bonded": "0.670000000000000000",
-        "blocks_per_year": "6311520"
-      }
-    },
-    "bank": {
-      "send_enabled": true
-    },
-    "distribution": {
-      "fee_pool": {
-        "community_pool": []
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
       },
-      "community_tax": "0.020000000000000000",
-      "base_proposer_reward": "0.010000000000000000",
-      "bonus_proposer_reward": "0.040000000000000000",
-      "withdraw_addr_enabled": true,
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "outstanding_rewards": [],
-      "validator_accumulated_commissions": [],
-      "validator_historical_rewards": [],
-      "validator_current_rewards": [],
-      "delegator_starting_infos": [],
-      "validator_slash_events": []
-    },
-    "staking": {
-      "params": {
-        "unbonding_time": "1814400000000000",
-        "max_validators": 100,
-        "max_entries": 7,
-        "bond_denom": "utnc"
-      },
-      "last_total_power": "0",
-      "last_validator_powers": null,
-      "validators": null,
-      "delegations": null,
-      "unbonding_delegations": null,
-      "redelegations": null,
-      "exported": false
-    },
-    "reward": {
-      "reward_pool": {
-        "reward_pool": []
-      },
-      "reward_tax": "0.030000000000000000",
-      "rewards": null
+      "signing_infos": {},
+      "missed_blocks": {}
     },
     "gov": {
       "starting_proposal_id": "1",
@@ -158,6 +51,36 @@
         "quorum": "0.334000000000000000",
         "threshold": "0.500000000000000000",
         "veto": "0.334000000000000000"
+      }
+    },
+    "crisis": {
+      "constant_fee": {
+        "denom": "utnc",
+        "amount": "1000"
+      }
+    },
+    "staking": {
+      "params": {
+        "unbonding_time": "1814400000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "utnc"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": null,
+      "validators": null,
+      "delegations": null,
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": false
+    },
+    "auth": {
+      "params": {
+        "max_memo_characters": "1000",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
       }
     },
     "genutil": {
@@ -209,29 +132,130 @@
         }
       ]
     },
-    "auth": {
-      "params": {
-        "max_memo_characters": "1000",
-        "tx_sig_limit": "7",
-        "tx_size_cost_per_byte": "10",
-        "sig_verify_cost_ed25519": "590",
-        "sig_verify_cost_secp256k1": "1000"
+    "reward": {
+      "reward_pool": {
+        "reward_pool": []
+      },
+      "reward_tax": "0.030000000000000000",
+      "rewards": null
+    },
+    "distribution": {
+      "fee_pool": {
+        "community_pool": []
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true,
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
+    },
+    "track": {
+      "starting_track_id": "1",
+      "tracks": null,
+      "deposits": null,
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "utnc",
+            "amount": "10000000"
+          }
+        ],
+        "max_deposit_period": "240000000000"
       }
     },
     "supply": {
       "supply": []
     },
-    "slashing": {
-      "params": {
-        "max_evidence_age": "120000000000",
-        "signed_blocks_window": "100",
-        "min_signed_per_window": "0.500000000000000000",
-        "downtime_jail_duration": "600000000000",
-        "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.010000000000000000"
+    "mint": {
+      "minter": {
+        "inflation": "0.130000000000000000",
+        "annual_provisions": "0.000000000000000000"
       },
-      "signing_infos": {},
-      "missed_blocks": {}
-    }
+      "params": {
+        "mint_denom": "utnc",
+        "inflation_rate_change": "0.130000000000000000",
+        "inflation_max": "0.200000000000000000",
+        "inflation_min": "0.070000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "accounts": [
+      {
+        "address": "trentino1kvf6x3t5p7gqe3qtx7cqx0sdd42mn062g0ycl6",
+        "coins": [
+          {
+            "denom": "utnc",
+            "amount": "150000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0",
+        "module_name": "",
+        "module_permissions": [
+          ""
+        ]
+      },
+      {
+        "address": "trentino1np2sw5nda8qg67ljhgm29xvymqdezg4wa7x7a9",
+        "coins": [
+          {
+            "denom": "utnc",
+            "amount": "116000000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0",
+        "module_name": "",
+        "module_permissions": [
+          ""
+        ]
+      },
+      {
+        "address": "trentino1cwwrn59texz99ulhaptmcxn30zt5pcukanwfcr",
+        "coins": [
+          {
+            "denom": "utn",
+            "amount": "1000000"
+          },
+          {
+            "denom": "utnc",
+            "amount": "1000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0",
+        "module_name": "",
+        "module_permissions": [
+          ""
+        ]
+      }
+    ],
+    "bank": {
+      "send_enabled": true
+    },
+    "params": null
   }
 }
